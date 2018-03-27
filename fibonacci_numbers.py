@@ -12,3 +12,15 @@
 
 
 # *** your code here ***
+def fibonacci(num):
+    fibonacci_list = []
+    for i in range(num):
+        if i <= 1:
+            fibonacci_list.append(i)
+        elif i == 2:
+            fibonacci_list.append(1)
+        else:
+            fibonacci_list.append(fibonacci_list[len(fibonacci_list) - 2] + fibonacci_list[len(fibonacci_list) - 1])
+    return fibonacci_list
+
+print(fibonacci(20))

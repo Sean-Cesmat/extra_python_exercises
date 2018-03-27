@@ -36,3 +36,21 @@
 
 
 # *** your code here ***
+def guessing_game(the_num):
+    guess = 0
+    num_of_guesses = 0
+    guess = input("Guess a number between 1 and 100 ")
+    while guess != the_num:
+        if int(guess) > the_num:
+            num_of_guesses += 1
+            guess = input(f"The number is lower than {guess} ")
+        elif int(guess) < the_num:
+            num_of_guesses += 1
+            guess = input(f"The number is higher than {guess}")
+        elif int(guess) == the_num:
+            num_of_guesses += 1
+            print(f"You got it in {num_of_guesses}")
+
+
+
+guessing_game(4)

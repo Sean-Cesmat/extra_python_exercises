@@ -8,3 +8,14 @@
 
 
 # *** your code here ***
+
+def odd_man_out(list):
+    odd_man = list[0]
+    for n in list:
+        if n == 0:
+            odd_man == list[n]
+        elif list[n] == list[n - 1]:
+            odd_man = list[n + 1]
+    return odd_man
+
+print( odd_man_out([1,1,2,2,3,3,4,5,5,6,6,7,7]) )
